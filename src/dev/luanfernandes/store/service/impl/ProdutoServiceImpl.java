@@ -5,7 +5,10 @@ import dev.luanfernandes.store.repository.ProdutoRepository;
 import dev.luanfernandes.store.repository.impl.ProdutoRepositoryImpl;
 import dev.luanfernandes.store.service.ProdutoService;
 
+import java.util.List;
 import java.util.Optional;
+
+import static java.util.Comparator.comparingDouble;
 
 public class ProdutoServiceImpl implements ProdutoService {
     private static ProdutoServiceImpl instance;
@@ -47,5 +50,13 @@ public class ProdutoServiceImpl implements ProdutoService {
         } else {
             System.out.println("PRODUTO NÃO ENCONTRADO!");
         }
+    }
+
+    @Override
+    public List<Produto> listarProdutos() {
+        List<Produto> produtos = produtoRepository.listarTodos();
+        return produtos.stream()
+                .sorted(comparingDouble(Produto::valor))
+                .toList();
     }
 }
