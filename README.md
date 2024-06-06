@@ -108,21 +108,23 @@ src/
 
 ## Executando a Aplicação
 
+Clone o repositório e acesse o diretório do projeto:
+
+```sh
+git clone https://github.com/souluanf/store-challenge-java.git
+cd store-challenge-java
+```
+
 Para compilar e executar a aplicação, siga os passos abaixo:
 
-1. Compile o projeto:
+1. Compile o projeto e gere o arquivo JAR:
    ```sh
-   javac -d out $(find src -name "*.java")
+   mvn clean package
    ```
 
-2. Crie o arquivo JAR:
+2. Execute a aplicação:
    ```sh
-   jar --create --file store.jar --main-class=dev.luanfernandes.store.Application -C out .
-   ```
-
-3. Execute a aplicação:
-   ```sh
-   java -jar store.jar
+   java -jar target/store-challenge-java.jar
    ```
 
 ## Como Utilizar
