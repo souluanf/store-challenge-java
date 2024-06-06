@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MenuPrincipal {
-
     private final StoreFacade storeFacade = StoreFacadeImpl.getInstance();
+    private final MenuCarrinho menuCarrinho = new MenuCarrinho();
 
     public void exibirMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -35,6 +35,7 @@ public class MenuPrincipal {
                 case 4 -> excluirProduto(scanner);
                 case 5 -> buscarProdutoPorNome(scanner);
                 case 6 -> buscarProdutoPorId(scanner);
+                case 7 -> menuCarrinho.exibirMenuCarrinho(scanner);
                 case 8 -> exibirMenuVenda(scanner);
                 case 9 -> {
                     System.out.println("SAINDO...");
