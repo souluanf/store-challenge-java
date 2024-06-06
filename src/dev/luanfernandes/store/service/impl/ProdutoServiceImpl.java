@@ -59,4 +59,9 @@ public class ProdutoServiceImpl implements ProdutoService {
                 .sorted(comparingDouble(Produto::valor))
                 .toList();
     }
+
+    @Override
+    public Optional<Produto> buscarPorId(int id) {
+        return produtoRepository.buscarPorId(id);
+    }
 }
