@@ -26,4 +26,5 @@ public interface StoreFacade {
 
     void comprarProduto(int id, int quantidade);
     void limparCarrinho();
+    List<Produto> listarCarrinho();
 }

@@ -91,4 +91,9 @@ public class StoreFacadeImpl implements StoreFacade {
     public void limparCarrinho() {
         carrinhoService.limparCarrinho();
     }
+
+    @Override
+    public List<Produto> listarCarrinho() {
+        return carrinhoService.listarCarrinho();
+    }
 }
