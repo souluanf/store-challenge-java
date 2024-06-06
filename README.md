@@ -2,7 +2,9 @@
 
 ## Descrição
 
-O sistema é uma aplicação desktop sem interface gráfica, onde toda a interação é feita via terminal. O projeto foi desenvolvido utilizando princípios de orientação a objetos, design patterns, algoritmos de busca e ordenação, novas features do Java (como Streams, records e sequence collections) e princípios SOLID.
+O sistema é uma aplicação desktop sem interface gráfica, onde toda a interação é feita via terminal. O projeto foi
+desenvolvido utilizando princípios de orientação a objetos, design patterns, algoritmos de busca e ordenação, novas
+features do Java (como Streams, records e sequence collections) e princípios SOLID.
 
 ## Funcionalidades
 
@@ -48,23 +50,28 @@ O sistema é uma aplicação desktop sem interface gráfica, onde toda a intera�
 ## Tecnologias e Práticas Utilizadas
 
 ### Orientação a Objetos (OO)
+
 - Uso de classes, objetos e encapsulamento.
 - Classes de serviço (`ProdutoService`, `CarrinhoService`, `VendaService`) para manipulação de dados.
 - Entidades representadas por `Produto`.
 
 ### Design Patterns
+
 - **Singleton**: Garantir que apenas uma instância de cada serviço seja criada.
 - **Facade**: Simplificar a interação com os serviços através da `StoreFacade`.
 
 ### Algoritmos de Busca e Ordenação
+
 - Uso de Streams para buscar e ordenar produtos de maneira eficiente.
 
 ### Novas Features do Java
+
 - **Streams**: Para processamento de coleções de produtos.
 - **Records**: Para representar a entidade `Produto`.
 - **Sequence Collections**: Uso de `List.of` para criar listas imutáveis.
 
 ### SOLID
+
 - **Single Responsibility Principle (SRP)**: Cada classe tem uma única responsabilidade.
 - **Open/Closed Principle (OCP)**: O design permite a extensão sem modificação.
 - **Liskov Substitution Principle (LSP)**: As classes de serviço implementam interfaces.
@@ -74,37 +81,43 @@ O sistema é uma aplicação desktop sem interface gráfica, onde toda a intera�
 ## Estrutura do Projeto
 
 ```plaintext
-src/
-└── dev/
-    └── luanfernandes/
-        └── store/
-            ├── entity/
-            │   └── Produto.java
-            ├── facade/
-            │   ├── StoreFacade.java
-            │   └── impl/
-            │       └── StoreFacadeImpl.java
-            ├── repository/
-            │   ├── CarrinhoRepository.java
-            │   ├── ProdutoRepository.java
-            │   └── impl/
-            │       ├── CarrinhoRepositoryImpl.java
-            │       └── ProdutoRepositoryImpl.java
-            ├── service/
-            │   ├── CarrinhoService.java
-            │   ├── ProdutoService.java
-            │   ├── VendaService.java
-            │   └── impl/
-            │       ├── CarrinhoServiceImpl.java
-            │       ├── ProdutoServiceImpl.java
-            │       └── VendaServiceImpl.java
-            ├── ui/
-            │   ├── MenuCarrinho.java
-            │   └── MenuPrincipal.java
-            ├── util/
-            │   └── FileUtils.java
-            └── Application.java
+src
+ └── dev
+     └── luanfernandes
+         └── store
+             ├── Application.java
+             ├── entity
+             │  └── Produto.java
+             ├── facade
+             │  ├── StoreFacade.java
+             │  └── impl
+             │      └── StoreFacadeImpl.java
+             ├── repository
+             │  ├── CarrinhoRepository.java
+             │  ├── ProdutoRepository.java
+             │  └── impl
+             │      ├── CarrinhoRepositoryImpl.java
+             │      └── ProdutoRepositoryImpl.java
+             ├── service
+             │  ├── CarrinhoService.java
+             │  ├── ProdutoService.java
+             │  ├── VendaService.java
+             │  └── impl
+             │      ├── CarrinhoServiceImpl.java
+             │      ├── ProdutoServiceImpl.java
+             │      └── VendaServiceImpl.java
+             ├── ui
+             │  ├── MenuCarrinho.java
+             │  └── MenuPrincipal.java
+             └── util
+                 ├── FileUtils.java
+                 └── MenuUtils.java
 ```
+
+### Base de Dados
+
+Os dados dos produtos são armazenados em arquivos `.txt` na pasta `data`. Cada produto é representado por uma linha no arquivo, com os campos separados por `;`.
+
 
 ## Executando a Aplicação
 
