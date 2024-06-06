@@ -20,6 +20,7 @@ target/
 *.ipr
 out/
 data/
+*.jar
 
 ### NetBeans ###
 /nbproject/private/
