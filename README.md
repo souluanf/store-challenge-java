@@ -135,5 +135,5 @@ Para compilar e executar a aplicação, siga os passos abaixo:
 4. **Excluir produto**: Exclui um produto existente pelo ID.
 5. **Buscar produto por nome**: Busca produtos pelo nome.
 6. **Buscar produto por ID**: Busca um produto pelo ID.
-7. **Carrinho**: Adiciona, remove produtos do carrinho e finaliza a compra.
+7. **Carrinho**: Adiciona, lista, remove produtos do carrinho e finaliza a compra.
 8. **Comprar Produto**: Realiza a compra de um produto específico.
