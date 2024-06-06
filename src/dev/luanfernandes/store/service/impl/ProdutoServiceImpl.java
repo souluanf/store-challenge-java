@@ -64,4 +64,15 @@ public class ProdutoServiceImpl implements ProdutoService {
     public Optional<Produto> buscarPorId(int id) {
         return produtoRepository.buscarPorId(id);
     }
+
+    @Override
+    public List<Produto> buscarProdutoPorNome(String nome) {
+        List<Produto> produtos = produtoRepository.listarTodos().stream()
+                .filter(p -> p.nome().toLowerCase().contains(nome.toLowerCase()))
+                .toList();
+        if (produtos.isEmpty()) {
+            System.out.println("NENHUM PRODUTO ENCONTRADO!");
+        }
+        return produtos;
+    }
 }

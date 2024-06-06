@@ -15,4 +15,6 @@ public interface ProdutoService {
     List<Produto> listarProdutos();
 
     Optional<Produto> buscarPorId(int id);
+
+    List<Produto> buscarProdutoPorNome(String nome);
 }
