@@ -39,4 +39,13 @@ public class ProdutoServiceImpl implements ProdutoService {
             System.out.println("PRODUTO NÃO ENCONTRADO!");
         }
     }
+
+    @Override
+    public void excluirProduto(int id) {
+        if (produtoRepository.excluir(id)) {
+            System.out.println("PRODUTO EXCLUIDO COM SUCESSO!");
+        } else {
+            System.out.println("PRODUTO NÃO ENCONTRADO!");
+        }
+    }
 }
